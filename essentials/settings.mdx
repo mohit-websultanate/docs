@@ -1,0 +1,18 @@
+---
+title: "Authentication & Signing"
+description: "This API uses RSA-based request signing instead of JWT or bearer tokens."
+icon: "gear"
+---
+
+Each request must be signed using your private key. The server verifies the signature using your public key.
+
+#### Credentials
+
+- **API Key** – sent in headers
+- **Private Key** – used for signing
+
+#### Why Signing?
+
+- Prevents tampering
+- Ensures request authenticity
+- No token/session management required

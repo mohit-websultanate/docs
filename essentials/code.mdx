@@ -1,0 +1,25 @@
+---
+title: "Launcher Payload"
+description: "The launcher URL contains encrypted session data."
+icon: "code"
+---
+
+#### Format
+
+```text
+<header>.<iv>.<ciphertext>.<tag>
+```
+
+#### Contains
+
+- operatorId
+- gameId
+- playerId
+- sessionId
+- expiry time
+
+#### Notes
+
+- Encrypted using AES-GCM
+- Cannot be modified
+- Automatically validated on launch

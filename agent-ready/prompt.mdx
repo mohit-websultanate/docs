@@ -1,0 +1,33 @@
+---
+title: "Error Handling"
+description: "All errors return a standard response format."
+icon: "robot"
+---
+
+#### Common Errors
+
+<Danger>
+  Invalid signature
+</Danger>
+
+<Danger>
+  Invalid timestamp
+</Danger>
+
+<Danger>
+  Nonce already used
+</Danger>
+
+<Danger>
+  Unauthorized operator
+</Danger>
+
+### Response Format
+
+```javascript
+{
+  "success": false,
+  "message": "Error message",
+  "errors": []
+}
+```

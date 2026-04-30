@@ -1,0 +1,18 @@
+---
+title: "Game Launch Flow"
+description: "Game launch is handled via a secure URL returned by the API."
+icon: "text-size"
+---
+
+#### Steps
+
+1. Call `/game-url` API
+2. Receive launcher URL
+3. Redirect player to URL
+4. Game session starts
+
+### Notes
+
+- URL is time-limited
+- One session per request
+- Should be opened in iframe or webview

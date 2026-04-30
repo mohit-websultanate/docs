@@ -1,0 +1,28 @@
+---
+title: "Request Signing Process"
+description: "Each request must include specific headers and a valid signature."
+icon: "map"
+---
+
+### Required Headers
+
+```text
+x-api-key
+x-timestamp (Unix ms)
+x-nonce (unique per request)
+x-signature
+```
+
+### Signature Format
+
+```text
+<METHOD>\n<PATH>\n<body>\n<timestamp>\n<nonce>
+```
+
+#### Steps
+
+1. Prepare request body
+2. Generate timestamp
+3. Generate nonce
+4. Create signature using RSA-SHA256
+5. Send request with headers

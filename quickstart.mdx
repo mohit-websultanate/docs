@@ -1,0 +1,29 @@
+---
+title: "How It Works"
+description: "The integration consists of two main parts:"
+icon: "rocket"
+---
+
+- **Public API** – Used to fetch categories, games, and generate launch URLs
+- **Game Launcher** – Used to start the game session via encrypted URL
+
+#### Flow Overview
+
+1. Operator calls APIs (categories, games)
+2. Operator requests `/game-url`
+3. Server returns encrypted launcher URL
+4. Player is redirected to the game
+
+#### Key Points
+
+- All API requests are RSA signed
+- Launcher URL contains encrypted session data
+- No direct authentication inside the game
+
+<Note>
+  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
+</Note>
+
+---
+
+---
